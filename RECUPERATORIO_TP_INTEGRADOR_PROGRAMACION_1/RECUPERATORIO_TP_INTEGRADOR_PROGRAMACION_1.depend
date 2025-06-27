@@ -1,0 +1,15 @@
+# depslib dependency file v1.0
+1750984632 source:d:\descargas\utn\cursada_2025\programacion_1\tp_integrador\recuperatorio_tp_integrador_programacion_1\recuperatorio-tp-integrador-programacion-1\recuperatorio_tp_integrador_programacion_1\main.cpp
+	<iostream>
+	<ctime>
+	<cstdlib>
+	<clocale>
+	"JUGAR.h"
+
+1750984667 d:\descargas\utn\cursada_2025\programacion_1\tp_integrador\recuperatorio_tp_integrador_programacion_1\recuperatorio-tp-integrador-programacion-1\recuperatorio_tp_integrador_programacion_1\jugar.h
+
+1750984685 source:d:\descargas\utn\cursada_2025\programacion_1\tp_integrador\recuperatorio_tp_integrador_programacion_1\recuperatorio-tp-integrador-programacion-1\recuperatorio_tp_integrador_programacion_1\jugar.cpp
+	<iostream>
+	<cstdlib>
+	"JUGAR.h"
+

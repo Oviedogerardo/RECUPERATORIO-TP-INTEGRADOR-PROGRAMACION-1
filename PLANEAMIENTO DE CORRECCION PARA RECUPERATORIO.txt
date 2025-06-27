@@ -1,41 +1,92 @@
 REFACTORING DE TP:
 
-FUNCION MENU:
-
-ARCHIVO JUGAR:
 
 
-funcion mostrar titulo
 
-{      
-        rlutil::cls();
-        cout<<"                         _______   ____________  _______   ______  ___    ____  ____  _____ "<<endl;
-        cout<<"                        / ____/ | / / ____/ __  \/ ____/ | / / _ _ \/   |  / __ \\/ _ \ /  ___/ "<<endl;
-        cout<<"                       / __/ /  |/ / /_  / /_/ / __/ /  |/ / / / / /| | / / / / / //\__  \\  "<<endl;
-        cout<<"                      / /___/ /|  / __/ / _, _/ /___/ /|  / /_/ / ___ |/ /_/ / /_//___/ /  "<<endl;
-        cout<<"                     /_____/_/ |_/_/   /_/ |_/_____/_/ |_/_____/_/  |_/_____/\____//____/   "<<endl;
-        cout<<""<<endl<<endl<<endl;
+void MostrarMenu()
+{
+    cout<<"                         _______   ____________  _______   ______  ___    ____  ____  _____ "<<endl;
+    cout<<"                        / ____/ | / / ____/ __  \/ ____/ | / / _ _ \/   |  / __ \\/ _ \ /  ___/ "<<endl;
+    cout<<"                       / __/ /  |/ / /_  / /_/ / __/ /  |/ / / / / /| | / / / / / //\__  \\  "<<endl;
+    cout<<"                      / /___/ /|  / __/ / _, _/ /___/ /|  / /_/ / ___ |/ /_/ / /_//___/ /  "<<endl;
+    cout<<"                     /_____/_/ |_/_/   /_/ |_/_____/_/ |_/_____/_/  |_/_____/\____//____/   "<<endl;
+    cout<<""<<endl<<endl<<endl;
+}
+---------------------------------------------------------------------------------------------------------------------------HECHO
+
+
+void MostrarOpciones()
+{
+    rlutil::locate(30,10);
+    cout<<"+---------------------+"<<endl;
+    rlutil::locate(30,11);
+    cout<<"|1 - JUGAR            |"<<endl;
+    rlutil::locate(30,12);
+    cout<<"|2 - ESTADISTICAS     |"<<endl;
+    rlutil::locate(30,13);
+    cout<<"|3 - CREDITOS         |"<<endl;
+    rlutil::locate(30,14);
+    cout<<"|0 - SALIR            |"<<endl;
+    rlutil::locate(30,15);
+    cout<<"+---------------------+"<<endl;
 }
 
----------------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------HECHO
 
-
-funcion opciones(opcion -variable por referencia-)
-
+void Fraces(int &Frace,string CambioFrase)
 {
 
-rlutil::locate(30,10);
-        cout<<"+---------------------+"<<endl;
-        rlutil::locate(30,11);
-        cout<<"|1 - JUGAR            |"<<endl;
-        rlutil::locate(30,12);
-        cout<<"|2 - ESTADISTICAS     |"<<endl;
-        rlutil::locate(30,13);
-        cout<<"|3 - CREDITOS         |"<<endl;
-        rlutil::locate(30,14);
-        cout<<"|0 - SALIR            |"<<endl;
-        rlutil::locate(30,15);
-        cout<<"+---------------------+"<<endl;
+    Frase = rand() % 4;
+    if (Frase == 0)
+    {
+        cout<<CambioFrase[0];
+    }
+
+    if (Frase == 1)
+    {
+        cout<<CambioFrase[1];
+    }
+
+    if (Frase == 2)
+    {
+        cout<<CambioFrase[2];
+    }
+
+    if (Frase == 3)
+    {
+        cout<<CambioFrase[3];
+    }
+}
+
+---------------------------------------------------------------------------------------------------------------------------HECHO
+
+void PedirOpciones(int Opcion, int Frace,int NombreJugadorNumero[],std::string NombreJugadorLetras[])  /// [3]
+{
+    cout<<"Ingrese una opcion: ";
+    cin >> Opcion;
+
+    switch (Opcion)
+    {
+
+    case 0:
+        Fraces(Frace);
+        break;
+
+    case 1:
+        PedirNombres(NombreJugadorNumero,NombreJugadorLetras);
+
+
+
+
+        break;
+
+    }
+
+}
+
+---------------------------------------------------------------------------------------------------------------------------HECHO
+
+
 
 rlutil::locate(30,18);
         cout<<"Ingrese una opcion: ";
@@ -44,12 +95,7 @@ rlutil::locate(30,18);
 switch (opcion)
         {
 
-        case 0: (aca hacer una funcion para mostrar distintos carteles de despedidas)
-		nos vemos
-		hasta luego
-		see you space cowboy
-		
-            cout << "Gracias por jugar" << endl << endl << endl;
+        case 0:
             break;
 
         case 1:
