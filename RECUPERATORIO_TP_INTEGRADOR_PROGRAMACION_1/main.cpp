@@ -10,18 +10,30 @@ int main()
 {
     int Despedida;
     int Opcion;
-    int NombreJugadorNumero [2]= {1,2};
-    string NombreJugadorLetras [2];
+    int CantidadJugadores;
+    int NombreJugadorNumero [CantidadJugadores]= {0};
+    string NombreJugadorLetras [CantidadJugadores];
+    int ValorDadoInicial[CantidadJugadores] = {0};
+
+    ///INCIALIZAMOS LOS ARRAY:
+    for (int i = 0; i < CantidadJugadores;i++)
+    {
+    NombreJugadorNumero[i] = 0;
+    ValorDadoInicial[i] = 0;
+
+    }
+
 
     srand(time(0));
 
     do
     {
-    MostrarTitulo();
+        MostrarTitulo();
 
         MostrarOpciones();
-        PedirOpciones(Opcion, Despedida, NombreJugadorNumero, NombreJugadorLetras);
-
+        PedirOpciones(Opcion, Despedida,
+                      CantidadJugadores,NombreJugadorNumero,
+                      NombreJugadorLetras,ValorDadoInicial);
     }
     while (Opcion != 0);
 

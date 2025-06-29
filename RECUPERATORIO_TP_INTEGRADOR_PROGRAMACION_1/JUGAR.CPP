@@ -60,7 +60,10 @@ void Despedidas(int &Despedida)   /// [3a]
 
 
 
-void PedirOpciones(int &Opcion, int &Despedida,int NombreJugadorNumero[],std::string NombreJugadorLetras[])  /// [3]
+void PedirOpciones(int &Opcion, int &Despedida,
+                   int &CantidadJugadores,int NombreJugadorNumero[],
+                   std::string NombreJugadorLetras[],
+                   int ValorDadoInicial[])  /// [3]
 {
     cout<<"Ingrese una opcion: ";
     cin >> Opcion;
@@ -73,7 +76,10 @@ void PedirOpciones(int &Opcion, int &Despedida,int NombreJugadorNumero[],std::st
         break;
 
     case 1:
-        PedirNombres(NombreJugadorNumero,NombreJugadorLetras);
+        IngresarJugadores(CantidadJugadores);
+        PedirNombres(CantidadJugadores,NombreJugadorNumero,
+                     NombreJugadorLetras);
+        TiraDadoInicial(CantidadJugadores,ValorDadoInicial);
 
 
 
@@ -94,17 +100,19 @@ void PedirOpciones(int &Opcion, int &Despedida,int NombreJugadorNumero[],std::st
 
 }
 
-void PedirNombres(int NombreJugadorNumero[],string NombreJugadorLetras[]) /// [4]
+void PedirNombres(int &CantidadJugadores,int NombreJugadorNumero[],
+                  string NombreJugadorLetras[]) /// [4]
 {
-    cout<<"INGRESAR NOMBRE DEL JUGADOR "<<NombreJugadorNumero[0]<<":";
-    cin>>NombreJugadorLetras[0];
+    for (int i = 1; i <= CantidadJugadores; i++)
+    {
+        cout<<"INGRESAR NOMBRE DEL JUGADOR "<<NombreJugadorNumero[i]<<":";
+        cin>>NombreJugadorLetras[i];
+    }
+    // PausayLimpia();
 
-    cout<<"INGRESAR NOMBRE DEL JUGADOR "<<NombreJugadorNumero[1]<<":";
-    cin>>NombreJugadorLetras[1];
+    // cout<<NombreJugadorLetras[0]<<endl;  ///JUGADOR1
 
-    cout<<NombreJugadorLetras[0]<<endl;  ///JUGADOR1
-
-    cout<<NombreJugadorLetras[1]<<endl;  ///JUGADOR2
+    // cout<<NombreJugadorLetras[1]<<endl;  ///JUGADOR2
 }
 
 void Estadisticas (string NombreJugadorLetras[]) ///[6].-
@@ -168,8 +176,28 @@ void Creditos() ///[9].-
 
 void MostrarNombres(string NombreJugadorLetras[]) ///[10].-
 {
+
+///aca poner un for para mostrar la cantidad de jugadores segun la cantidad de jugadores
     cout<<"                                              Jugador 1: "<<NombreJugadorLetras[0]<<endl;
 
     cout<<"                                              Jugador 2: "<<NombreJugadorLetras[1]<<endl<<endl;
 
 }
+
+void TiraDadoInicial(int &CantidadJugadores, int ValorDadoInicial[]) ///[11].-
+{
+    for (int i = 0; i<CantidadJugadores; i++)
+    {
+        ValorDadoInicial[i] = rand() % 6 + 1;
+        cout<<ValorDadoInicial[i];
+    }
+}
+
+void IngresarJugadores (int &CantidadJugadores)
+{
+    cout<<"Ingrese la cantidad de Jugadores"<<endl<<endl;
+    cin>>CantidadJugadores;
+
+
+}
+
