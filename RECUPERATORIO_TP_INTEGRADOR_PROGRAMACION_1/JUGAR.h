@@ -1,12 +1,19 @@
 #ifndef JUGAR_H_INCLUDED
 #define JUGAR_H_INCLUDED
 
-void MostrarMenu();  /// [1]
-void MostrarOpciones(); /// [2]
-void Fraces(); /// [3a]
-void PedirOpciones(int Opcion, int Frace,int NombreJugadorNumero[],std::string NombreJugadorLetras[]); /// [3]
-void PedirNombres(int NombreJugadorNumero[],std::string NombreJugadorLetras[]); /// [4]
+///NUMERACION EN ORDEN DE CREACION.-
 
+void MostrarTitulo();  /// [1]
+void MostrarOpciones(); /// [2]
+void Despedidas(int &Despedida); /// [3a]
+void PedirOpciones(int &Opcion, int &Despedida,int NombreJugadorNumero[],std::string NombreJugadorLetras[]); /// [3]
+void PedirNombres(int NombreJugadorNumero[],std::string NombreJugadorLetras[]); /// [4]
+void PausayLimpia(); ///[5].-
+void Estadisticas (std::string NombreJugadorLetras[]); ///[6].-
+void Limpia(); ///[7].-
+void Pausa();  ///[8].-
+void Creditos();///[9].-
+void MostrarNombres(std::string NombreJugadorLetras[]);///[10].-
 
 
 

@@ -8,16 +8,23 @@ using namespace std;
 
 int main()
 {
-    int Frase;
+    int Despedida;
     int Opcion;
     int NombreJugadorNumero [2]= {1,2};
     string NombreJugadorLetras [2];
 
     srand(time(0));
 
-    MostrarMenu();
-    MostrarOpciones();
-    PedirOpciones(Opcion, Frase, NombreJugadorNumero, NombreJugadorLetras);
+    do
+    {
+    MostrarTitulo();
+
+        MostrarOpciones();
+        PedirOpciones(Opcion, Despedida, NombreJugadorNumero, NombreJugadorLetras);
+
+    }
+    while (Opcion != 0);
+
 
 
 
