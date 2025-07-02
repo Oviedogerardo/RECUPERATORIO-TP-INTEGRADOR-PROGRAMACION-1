@@ -1,6 +1,7 @@
 #include <iostream>
 #include <cstdlib>
 #include "JUGAR.h"
+#include "DADOS.h"
 
 using namespace std;
 
@@ -62,8 +63,9 @@ void Despedidas(int &Despedida)   /// [3a]
 
 void PedirOpciones(int &Opcion, int &Despedida,
                    int &CantidadJugadores,int NombreJugadorNumero[],
-                   std::string NombreJugadorLetras[],
-                   int ValorDadoInicial[])  /// [3]
+                   std::string NombreJugadorLetras[],int ValorDadoInicial[],
+                   const int&CantidadJugadoresMaximos, int &Ronda,
+                   int ValorInicialMaximo)  /// [3]
 {
     cout<<"Ingrese una opcion: ";
     cin >> Opcion;
@@ -76,10 +78,24 @@ void PedirOpciones(int &Opcion, int &Despedida,
         break;
 
     case 1:
+        Limpia();
+        MostrarTitulo();
         IngresarJugadores(CantidadJugadores);
-        PedirNombres(CantidadJugadores,NombreJugadorNumero,
-                     NombreJugadorLetras);
-        TiraDadoInicial(CantidadJugadores,ValorDadoInicial);
+        PedirNombres(CantidadJugadoresMaximos, CantidadJugadores,
+                     NombreJugadorNumero, NombreJugadorLetras);
+        PausayLimpia();
+        MostrarRonda(Ronda);
+        TiraDadoInicial(CantidadJugadores,ValorDadoInicial,
+                        NombreJugadorNumero,NombreJugadorLetras,
+                        ValorInicialMaximo);
+        while (Ronda <= 3)
+        {
+        MostrarRonda(Ronda);
+
+
+
+          Ronda++;
+        }
 
 
 
@@ -87,11 +103,12 @@ void PedirOpciones(int &Opcion, int &Despedida,
         break;
 
     case 2:
-        Estadisticas(NombreJugadorLetras);
+        // Estadisticas(NombreJugadorLetras);
         break;
 
     case 3:
         Creditos();
+        break;
 
     default:
         cout<<"ESTA OPCION ES INCORRECTA"<<endl;
@@ -100,38 +117,50 @@ void PedirOpciones(int &Opcion, int &Despedida,
 
 }
 
-void PedirNombres(int &CantidadJugadores,int NombreJugadorNumero[],
+void PedirNombres(const int &CantidadJugadoresMaximos,int &CantidadJugadores, int NombreJugadorNumero[],
                   string NombreJugadorLetras[]) /// [4]
 {
+
+    ///INCIALIZAMOS LOS ARRAY, DESDE JUGADOR 0 AL 9999, PARA USAR NUMERO
+    for (int i = 0; i <= CantidadJugadores; i++)
+    {
+        NombreJugadorNumero[i] = i;
+    }
+
+
     for (int i = 1; i <= CantidadJugadores; i++)
     {
         cout<<"INGRESAR NOMBRE DEL JUGADOR "<<NombreJugadorNumero[i]<<":";
         cin>>NombreJugadorLetras[i];
     }
-    // PausayLimpia();
+
 
     // cout<<NombreJugadorLetras[0]<<endl;  ///JUGADOR1
 
     // cout<<NombreJugadorLetras[1]<<endl;  ///JUGADOR2
 }
 
-void Estadisticas (string NombreJugadorLetras[]) ///[6].-
+/* Estadisticas (string NombreJugadorLetras[], int NombreJugadorNumero[]) ///[6].-
 {
     system("cls");
+
+
     cout<<"                    ---------------------ESTADISTICAS---------------------"<<endl<<endl;
 
-    cout<<"El Jugador 1: "<<NombreJugadorLetras[0]<<" tuvo estos puntos: FALTA AGREGAR PUNTOS"<<endl;//<<PuntajeJugador1<<endl<<endl;
+    ///PARA HACER, ACA VAS A PONER LOS PUNTOS DINAMICAMENTE DEPENDIENDO DE LA CANTIDAD D EJUGADORES QUE ENTREN
+
+    cout<<"El Jugador "<<NombreJugadorNumero[]<<": "<<NombreJugadorLetras[0]<<" tuvo estos puntos: FALTA AGREGAR PUNTOS"<<endl;//<<PuntajeJugador1<<endl<<endl;
 
     cout<<"El Jugador 2: "<<NombreJugadorLetras[1]<<" tuvo estos puntos: FALTA AGREGAR PUNTOS"<<endl;//<<PuntajeJugador2<<endl<<endl;
 
     /*if (PuntajeJugador1 == 0 & PuntajeJugador2 == 0)
     {
         cout<<"QUE HACEN MIRANDO ESTO?? VAYAN A JUGAR Y VUELVAN!!!"<<endl<<endl;
-    } */
+    }
 
 
 
-}
+} */
 
 void PausayLimpia() ///[5].-
 {
@@ -172,6 +201,7 @@ void Creditos() ///[9].-
 
     cout << "Legajo #31174";
     cout << endl;
+    PausayLimpia();
 }
 
 void MostrarNombres(string NombreJugadorLetras[]) ///[10].-
@@ -184,20 +214,17 @@ void MostrarNombres(string NombreJugadorLetras[]) ///[10].-
 
 }
 
-void TiraDadoInicial(int &CantidadJugadores, int ValorDadoInicial[]) ///[11].-
+
+
+void IngresarJugadores (int &CantidadJugadores) ///[12].-
 {
-    for (int i = 0; i<CantidadJugadores; i++)
-    {
-        ValorDadoInicial[i] = rand() % 6 + 1;
-        cout<<ValorDadoInicial[i];
-    }
+    cout<<"Ingrese la cantidad de Jugadores: ";
+    cin>>CantidadJugadores;
 }
 
-void IngresarJugadores (int &CantidadJugadores)
+void MostrarRonda(int &Ronda) ///[13].-
 {
-    cout<<"Ingrese la cantidad de Jugadores"<<endl<<endl;
-    cin>>CantidadJugadores;
-
+    cout<<"                                              RONDA NUMERO: "<<Ronda<<endl<<endl;
 
 }
 

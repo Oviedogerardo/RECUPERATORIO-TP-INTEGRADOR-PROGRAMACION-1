@@ -1,17 +1,18 @@
 # depslib dependency file v1.0
-1751169300 source:d:\descargas\utn\cursada_2025\programacion_1\tp_integrador\recuperatorio_tp_integrador_programacion_1\recuperatorio-tp-integrador-programacion-1\recuperatorio_tp_integrador_programacion_1\main.cpp
+1751421773 source:d:\descargas\utn\cursada_2025\programacion_1\tp_integrador\recuperatorio_tp_integrador_programacion_1\recuperatorio-tp-integrador-programacion-1\recuperatorio_tp_integrador_programacion_1\main.cpp
 	<iostream>
 	<ctime>
 	<cstdlib>
 	<clocale>
 	"JUGAR.h"
 
-1751170083 d:\descargas\utn\cursada_2025\programacion_1\tp_integrador\recuperatorio_tp_integrador_programacion_1\recuperatorio-tp-integrador-programacion-1\recuperatorio_tp_integrador_programacion_1\jugar.h
+1751421761 d:\descargas\utn\cursada_2025\programacion_1\tp_integrador\recuperatorio_tp_integrador_programacion_1\recuperatorio-tp-integrador-programacion-1\recuperatorio_tp_integrador_programacion_1\jugar.h
 
-1751170083 source:d:\descargas\utn\cursada_2025\programacion_1\tp_integrador\recuperatorio_tp_integrador_programacion_1\recuperatorio-tp-integrador-programacion-1\recuperatorio_tp_integrador_programacion_1\jugar.cpp
+1751421761 source:d:\descargas\utn\cursada_2025\programacion_1\tp_integrador\recuperatorio_tp_integrador_programacion_1\recuperatorio-tp-integrador-programacion-1\recuperatorio_tp_integrador_programacion_1\jugar.cpp
 	<iostream>
 	<cstdlib>
 	"JUGAR.h"
+	"DADOS.h"
 
 1751238670 source:/home/pocho/Downloads/RECUPERATORIO-TP-INTEGRADOR-PROGRAMACION-1-main/RECUPERATORIO_TP_INTEGRADOR_PROGRAMACION_1/JUGAR.CPP
 	<iostream>
@@ -26,4 +27,12 @@
 	<cstdlib>
 	<clocale>
 	"JUGAR.h"
+
+1751421972 source:d:\descargas\utn\cursada_2025\programacion_1\tp_integrador\recuperatorio_tp_integrador_programacion_1\recuperatorio-tp-integrador-programacion-1\recuperatorio_tp_integrador_programacion_1\dados.cpp
+	<iostream>
+	<cstdlib>
+	"JUGAR.h"
+	"DADOS.h"
+
+1751421761 d:\descargas\utn\cursada_2025\programacion_1\tp_integrador\recuperatorio_tp_integrador_programacion_1\recuperatorio-tp-integrador-programacion-1\recuperatorio_tp_integrador_programacion_1\dados.h
 

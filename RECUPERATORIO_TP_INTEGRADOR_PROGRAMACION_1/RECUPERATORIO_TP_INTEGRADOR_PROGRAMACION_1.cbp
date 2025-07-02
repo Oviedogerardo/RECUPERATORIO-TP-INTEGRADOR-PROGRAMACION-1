@@ -32,6 +32,8 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="DADOS.CPP" />
+		<Unit filename="DADOS.H" />
 		<Unit filename="JUGAR.CPP" />
 		<Unit filename="JUGAR.h" />
 		<Unit filename="main.cpp" />

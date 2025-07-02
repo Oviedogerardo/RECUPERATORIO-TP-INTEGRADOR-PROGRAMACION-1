@@ -10,18 +10,14 @@ int main()
 {
     int Despedida;
     int Opcion;
+    const int CantidadJugadoresMaximos = 9999; ///ESTO SE AGREGO PORQUE DABA ERROR Y EN C++ NO ESTA PERMITIDO DE LA MANERA QUE SE PLANTEO USAR ARRAYS DINAMICOS
     int CantidadJugadores;
-    int NombreJugadorNumero [CantidadJugadores]= {0};
-    string NombreJugadorLetras [CantidadJugadores];
-    int ValorDadoInicial[CantidadJugadores] = {0};
+    int NombreJugadorNumero [CantidadJugadoresMaximos];
+    string NombreJugadorLetras [CantidadJugadoresMaximos];
+    int Ronda = 1;
+    int ValorDadoInicial[CantidadJugadoresMaximos];
+    int ValorIncialMaximo;
 
-    ///INCIALIZAMOS LOS ARRAY:
-    for (int i = 0; i < CantidadJugadores;i++)
-    {
-    NombreJugadorNumero[i] = 0;
-    ValorDadoInicial[i] = 0;
-
-    }
 
 
     srand(time(0));
@@ -33,7 +29,9 @@ int main()
         MostrarOpciones();
         PedirOpciones(Opcion, Despedida,
                       CantidadJugadores,NombreJugadorNumero,
-                      NombreJugadorLetras,ValorDadoInicial);
+                      NombreJugadorLetras,ValorDadoInicial,
+                      CantidadJugadoresMaximos,Ronda,
+                      ValorIncialMaximo);
     }
     while (Opcion != 0);
 
