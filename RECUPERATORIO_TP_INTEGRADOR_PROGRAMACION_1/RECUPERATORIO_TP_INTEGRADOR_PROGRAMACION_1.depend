@@ -1,14 +1,14 @@
 # depslib dependency file v1.0
-1751421773 source:d:\descargas\utn\cursada_2025\programacion_1\tp_integrador\recuperatorio_tp_integrador_programacion_1\recuperatorio-tp-integrador-programacion-1\recuperatorio_tp_integrador_programacion_1\main.cpp
+1751766878 source:d:\descargas\utn\cursada_2025\programacion_1\tp_integrador\recuperatorio_tp_integrador_programacion_1\recuperatorio-tp-integrador-programacion-1\recuperatorio_tp_integrador_programacion_1\main.cpp
 	<iostream>
 	<ctime>
 	<cstdlib>
 	<clocale>
 	"JUGAR.h"
 
-1751421761 d:\descargas\utn\cursada_2025\programacion_1\tp_integrador\recuperatorio_tp_integrador_programacion_1\recuperatorio-tp-integrador-programacion-1\recuperatorio_tp_integrador_programacion_1\jugar.h
+1751767107 d:\descargas\utn\cursada_2025\programacion_1\tp_integrador\recuperatorio_tp_integrador_programacion_1\recuperatorio-tp-integrador-programacion-1\recuperatorio_tp_integrador_programacion_1\jugar.h
 
-1751421761 source:d:\descargas\utn\cursada_2025\programacion_1\tp_integrador\recuperatorio_tp_integrador_programacion_1\recuperatorio-tp-integrador-programacion-1\recuperatorio_tp_integrador_programacion_1\jugar.cpp
+1751763714 source:d:\descargas\utn\cursada_2025\programacion_1\tp_integrador\recuperatorio_tp_integrador_programacion_1\recuperatorio-tp-integrador-programacion-1\recuperatorio_tp_integrador_programacion_1\jugar.cpp
 	<iostream>
 	<cstdlib>
 	"JUGAR.h"
@@ -28,11 +28,11 @@
 	<clocale>
 	"JUGAR.h"
 
-1751421972 source:d:\descargas\utn\cursada_2025\programacion_1\tp_integrador\recuperatorio_tp_integrador_programacion_1\recuperatorio-tp-integrador-programacion-1\recuperatorio_tp_integrador_programacion_1\dados.cpp
+1751767310 source:d:\descargas\utn\cursada_2025\programacion_1\tp_integrador\recuperatorio_tp_integrador_programacion_1\recuperatorio-tp-integrador-programacion-1\recuperatorio_tp_integrador_programacion_1\dados.cpp
 	<iostream>
 	<cstdlib>
 	"JUGAR.h"
 	"DADOS.h"
 
-1751421761 d:\descargas\utn\cursada_2025\programacion_1\tp_integrador\recuperatorio_tp_integrador_programacion_1\recuperatorio-tp-integrador-programacion-1\recuperatorio_tp_integrador_programacion_1\dados.h
+1751767297 d:\descargas\utn\cursada_2025\programacion_1\tp_integrador\recuperatorio_tp_integrador_programacion_1\recuperatorio-tp-integrador-programacion-1\recuperatorio_tp_integrador_programacion_1\dados.h
 

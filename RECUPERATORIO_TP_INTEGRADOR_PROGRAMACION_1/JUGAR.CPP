@@ -63,9 +63,10 @@ void Despedidas(int &Despedida)   /// [3a]
 
 void PedirOpciones(int &Opcion, int &Despedida,
                    int &CantidadJugadores,int NombreJugadorNumero[],
-                   std::string NombreJugadorLetras[],int ValorDadoInicial[],
+                   string NombreJugadorLetras[],int ValorDadoInicial[],
                    const int&CantidadJugadoresMaximos, int &Ronda,
-                   int ValorInicialMaximo)  /// [3]
+                   int &ValorInicialMaximo, int CantidadDadosObjetivo,
+                   int DadoObjetivo[], int NumeroObjetivo)  /// [3]
 {
     cout<<"Ingrese una opcion: ";
     cin >> Opcion;
@@ -88,13 +89,37 @@ void PedirOpciones(int &Opcion, int &Despedida,
         TiraDadoInicial(CantidadJugadores,ValorDadoInicial,
                         NombreJugadorNumero,NombreJugadorLetras,
                         ValorInicialMaximo);
+
+        PausayLimpia();
+
+        ///OJO PARA HACER, DEFINIR QUIEN EMPIEZA PRIMERO, PORQUE ESTAS USANDO UNA CANTIDAD 9999 DE JUGADORES!!! TIENE Q EVALUAR ESO!
+
+
         while (Ronda <= 3)
         {
-        MostrarRonda(Ronda);
+            MostrarRonda(Ronda);
+
+            ///aca poner la funcion de motrar nombres
+
+            for (int i = 1; i <= CantidadJugadores; i++)
+            {
+                cout<<"El Jugador "<<NombreJugadorNumero[i]<<": "<<NombreJugadorLetras[i];
+
+                    TirarDadosObjetivo(CantidadDadosObjetivo, DadoObjetivo,
+                                       NumeroObjetivo);
+                cout<<"El Numero Objetivo a llegar es: "<<NumeroObjetivo<<endl;
+
+                CeroNumeroObjetivo(NumeroObjetivo);
+
+            }
 
 
 
-          Ronda++;
+
+
+
+
+            Ronda++;
         }
 
 
@@ -133,11 +158,6 @@ void PedirNombres(const int &CantidadJugadoresMaximos,int &CantidadJugadores, in
         cout<<"INGRESAR NOMBRE DEL JUGADOR "<<NombreJugadorNumero[i]<<":";
         cin>>NombreJugadorLetras[i];
     }
-
-
-    // cout<<NombreJugadorLetras[0]<<endl;  ///JUGADOR1
-
-    // cout<<NombreJugadorLetras[1]<<endl;  ///JUGADOR2
 }
 
 /* Estadisticas (string NombreJugadorLetras[], int NombreJugadorNumero[]) ///[6].-

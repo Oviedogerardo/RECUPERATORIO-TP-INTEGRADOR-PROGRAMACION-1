@@ -3,8 +3,11 @@
 
  void TiraDadoInicial(int &CantidadJugadores, int ValorDadoInicial[],
                       int NombreJugadorNumero[], std::string NombreJugadorLetras[],
-                      int ValorInicialMaximo); ///[11].-
-void DibujarDado(int Valor);
+                      int &ValorInicialMaximo); ///[11].-
+void DibujarDado(int Valor); ///[14].-
+void TirarDadosObjetivo (int CantidadDadosObjetivo, int DadoObjetivo[],
+                          int NumeroObjetivo); ///[15].-
+void CeroNumeroObjetivo(int NumeroObjetivo); ///[16].-
 
 
 

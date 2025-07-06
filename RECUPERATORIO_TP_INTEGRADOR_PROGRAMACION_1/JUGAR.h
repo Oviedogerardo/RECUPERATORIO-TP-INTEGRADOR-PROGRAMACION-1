@@ -7,10 +7,11 @@ void MostrarTitulo();  /// [1]
 void MostrarOpciones(); /// [2]
 void Despedidas(int &Despedida); /// [3a]
 void PedirOpciones(int &Opcion, int &Despedida,
-                   int &CantidadJugadores, int NombreJugadorNumero[],
+                   int &CantidadJugadores,int NombreJugadorNumero[],
                    std::string NombreJugadorLetras[],int ValorDadoInicial[],
-                   const int &CantidadJugadoresMaximos, int &Ronda,
-                   int ValorInicialMaximo); /// [3]
+                   const int&CantidadJugadoresMaximos, int &Ronda,
+                   int &ValorInicialMaximo, int CantidadDadosObjetivo,
+                   int DadoObjetivo[], int NumeroObjetivo);  /// [3]
 void PedirNombres(const int &CantidadJugadoresMaximos,int &CantidadJugadores, int NombreJugadorNumero[],
                    std::string NombreJugadorLetras[]); /// [4]
 void PausayLimpia(); ///[5].-

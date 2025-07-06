@@ -17,6 +17,9 @@ int main()
     int Ronda = 1;
     int ValorDadoInicial[CantidadJugadoresMaximos];
     int ValorIncialMaximo;
+    const int CantidadDadosObjetivo = 2;
+    int DadoObjetivo[CantidadDadosObjetivo];
+    int NumeroObjetivo = 0;
 
 
 
@@ -31,16 +34,10 @@ int main()
                       CantidadJugadores,NombreJugadorNumero,
                       NombreJugadorLetras,ValorDadoInicial,
                       CantidadJugadoresMaximos,Ronda,
-                      ValorIncialMaximo);
+                      ValorIncialMaximo, CantidadDadosObjetivo,
+                      DadoObjetivo, NumeroObjetivo);
     }
     while (Opcion != 0);
-
-
-
-
-
-
-
 
     return 0;
 }

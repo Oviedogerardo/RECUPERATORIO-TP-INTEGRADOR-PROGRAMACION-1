@@ -7,9 +7,10 @@ using namespace std;
 
 void TiraDadoInicial(int &CantidadJugadores, int ValorDadoInicial[],
                      int NombreJugadorNumero[], string NombreJugadorLetras[],
-                     int ValorInicialMaximo) ///[11].-
+                     int &ValorInicialMaximo) ///[11].-
 {
     int ValorDado;  ///VARIABLE PARA PODER DIBUJAR EL DADO CON EL VALOR DEL VECTOR
+
 
     for (int i = 1; i<=CantidadJugadores; i++)  ///PARA DAR VALOR A DADOS INICIALES
     {
@@ -23,7 +24,7 @@ void TiraDadoInicial(int &CantidadJugadores, int ValorDadoInicial[],
 
     for (int i = 1; i <= CantidadJugadores; i++)  ///PARA MOSTRAR DADOS INICIALES
     {
-        cout<<"El Valor del Dado Inicial del Jugador "<<NombreJugadorNumero[i]<<" **"<<NombreJugadorLetras[i]<<"** es:";
+        cout<<"El Valor del Dado Inicial del Jugador "<<NombreJugadorNumero[i]<<" **"<<NombreJugadorLetras[i]<<"** es: ";
         cout<<ValorDadoInicial[i]<<endl;
 
         ValorDado = ValorDadoInicial[i];
@@ -40,8 +41,10 @@ void TiraDadoInicial(int &CantidadJugadores, int ValorDadoInicial[],
         }
 
 
-    }
 
+
+    }
+    //cout<<ValorInicialMaximo;
 
 
 }
@@ -95,6 +98,34 @@ void DibujarDado(int ValorDado)
         break;
     }
 }
+
+void TirarDadosObjetivo (int CantidadDadosObjetivo, int DadoObjetivo[],
+                          int NumeroObjetivo) ///[15].-
+{
+
+
+    for (int i = 0; i<=CantidadDadosObjetivo; i++)  ///PARA DAR VALOR A DADOS OBJETIVO
+    {
+        DadoObjetivo[i] = rand() % 12 + 1;
+        NumeroObjetivo += DadoObjetivo[i];
+    }
+
+}
+
+void CeroNumeroObjetivo(int NumeroObjetivo) ///[16].-
+{
+    NumeroObjetivo = 0;
+
+}
+
+void MostrarDadosObjetivo ()
+{
+
+
+
+}
+
+
 
 
 
