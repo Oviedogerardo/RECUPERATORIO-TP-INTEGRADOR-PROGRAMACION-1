@@ -40,7 +40,13 @@ void TiraDadoInicial(int &CantidadJugadores, int ValorDadoInicial[],
             ValorInicialMaximo = ValorDado;
         }
 
-
+        if (ValorInicialMaximo == ValorDadoInicial[i])
+        {
+           // i--;
+            ValorDadoInicial[i] = rand() % 6 + 1;
+        }
+        cout<<endl;
+        cout<<ValorInicialMaximo;
 
 
     }

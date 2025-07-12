@@ -146,7 +146,7 @@ void PedirNombres(const int &CantidadJugadoresMaximos,int &CantidadJugadores, in
                   string NombreJugadorLetras[]) /// [4]
 {
 
-    ///INCIALIZAMOS LOS ARRAY, DESDE JUGADOR 0 AL 9999, PARA USAR NUMERO
+    ///INCIALIZAMOS LOS ARRAY, DESDE JUGADOR 0 AL 5, PARA USAR NUMERO
     for (int i = 0; i <= CantidadJugadores; i++)
     {
         NombreJugadorNumero[i] = i;
@@ -167,7 +167,7 @@ void PedirNombres(const int &CantidadJugadoresMaximos,int &CantidadJugadores, in
 
     cout<<"                    ---------------------ESTADISTICAS---------------------"<<endl<<endl;
 
-    ///PARA HACER, ACA VAS A PONER LOS PUNTOS DINAMICAMENTE DEPENDIENDO DE LA CANTIDAD D EJUGADORES QUE ENTREN
+    ///PARA HACER, ACA VAS A PONER LOS PUNTOS DINAMICAMENTE DEPENDIENDO DE LA CANTIDAD D EJUGADORES QUE ENTREN   ///mostrar solo el jugador que gana!!!!
 
     cout<<"El Jugador "<<NombreJugadorNumero[]<<": "<<NombreJugadorLetras[0]<<" tuvo estos puntos: FALTA AGREGAR PUNTOS"<<endl;//<<PuntajeJugador1<<endl<<endl;
 

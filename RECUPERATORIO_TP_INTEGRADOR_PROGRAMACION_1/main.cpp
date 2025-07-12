@@ -10,7 +10,7 @@ int main()
 {
     int Despedida;
     int Opcion;
-    const int CantidadJugadoresMaximos = 9999; ///ESTO SE AGREGO PORQUE DABA ERROR Y EN C++ NO ESTA PERMITIDO DE LA MANERA QUE SE PLANTEO USAR ARRAYS DINAMICOS
+    const int CantidadJugadoresMaximos = 5; ///ESTO SE AGREGO PORQUE DABA ERROR Y EN C++ NO ESTA PERMITIDO DE LA MANERA QUE SE PLANTEO USAR ARRAYS DINAMICOS
     int CantidadJugadores;
     int NombreJugadorNumero [CantidadJugadoresMaximos];
     string NombreJugadorLetras [CantidadJugadoresMaximos];
